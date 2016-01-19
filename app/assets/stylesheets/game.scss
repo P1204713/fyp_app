@@ -1,0 +1,82 @@
+// Place all the styles related to the Game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+    h1 {
+     text-align: center;
+     margin-top: 200px;
+     margin-bottom: 50px;
+     font-size: 50px;
+     font-weight: bold;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     color: #00FFFF;
+    }
+
+    h2 {
+     text-align: center;
+     margin-top: 50px;
+     margin-bottom: 50px;
+     font-size: 40px;
+     font-weight: bold;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     color: #00FF99;
+    }
+
+    body {
+     text-align: center;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     background-color: #996666;
+    }   
+
+
+    h3 {
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     /* color: #00FF99; */ 
+    }
+
+
+    h4 {
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     /* color: #00FF99; */
+}
+
+
+    /* h5 {
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     color: #00FF99; 
+    } */ 
+
+
+    /* h6 {
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     font-size: 15px;
+     /* color: #00FF99; 
+    } */
+
+    
+    
+    p {
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-family: Comic Sans MS, cursive, sans-serif;
+     font-size: 15px;
+     color: #FF99FF;
+}

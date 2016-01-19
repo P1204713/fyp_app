@@ -1,0 +1,30 @@
+<!-- <h1>Game#index</h1>
+<p>Find me in app/views/game/index.html.erb</p> -->
+
+
+
+
+
+
+
+<h4>
+<% if current_user %>
+    <%= link_to('sign out', destroy_user_session_path, :method => :delete, class: "btn btn-default") %> |
+    <%= link_to('change password', edit_registration_path(:user), class: "btn btn-default") %>
+<% else %>
+    <%= link_to('create', new_registration_path(:user)) %> |
+    <%= link_to('sign in', new_session_path(:user)) %>
+<% end %>
+</h4>
+
+
+
+
+
+<!-- <% if current_user %>
+    <%= link_to('sign out', destroy_user_session_path, :method => :delete) %> |
+    <%= link_to('change password', edit_registration_path(:user)) %>
+<% else %>
+    <%= link_to('create', new_registration_path(:user)) %> |
+    <%= link_to('sign in', new_session_path(:user)) %>
+<% end %> -->
