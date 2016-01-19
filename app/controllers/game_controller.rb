@@ -1,6 +1,10 @@
 class GameController < ApplicationController
   before_action :authenticate_user! #, only: [:]
   
+  def vocab_display
+  
+  end
+  
   #def index
   #end
 
