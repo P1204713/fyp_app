@@ -2,21 +2,32 @@
 <p>Find me in app/views/game/index.html.erb</p> -->
 
 <h4>
-<% if current_user %>
-<table align=center>
-<% @game.each do |f| %>
+  <table align=center>
     <tr>
-        <td><%= f.word %></td>
+      <td><%= @game.word %></td>
     </tr>
-<%end%>
-</table>
+  </table>
+</h4>  
+  
+  <%= link_to('I am not OKAY with this', root_path, class: "btn btn-default") %>
+  <%= link_to('I am Fair with this', root_path, class: "btn btn-default") %>
+  <%= link_to('I am definitely OKAY with this', root_path, class: "btn btn-default") %>
+ 
+  <!-- <a href="https://fyp-p1204713.c9users.io/", class: "btn btn-default">Reload</a> -->
+  <!-- <input type="button" name="333" value="Reload" onClick="window.location.href='https://fyp-p1204713.c9users.io/'" class="btn btn-default"> -->
+   
+   
+<br> 
+  
+<h5>
+<% if current_user %> 
     <%= link_to('sign out', destroy_user_session_path, :method => :delete, class: "btn btn-default") %> |
     <%= link_to('change password', edit_registration_path(:user), class: "btn btn-default") %>
 <% else %>
     <%= link_to('create', new_registration_path(:user)) %> |
     <%= link_to('sign in', new_session_path(:user)) %>
 <% end %>
-</h4>
+</h5>
 
 
 

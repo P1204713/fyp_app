@@ -1,8 +1,8 @@
 class GameController < ApplicationController
   before_action :authenticate_user! #, only: [:]
   
-  def vocab_display
-  
+  def game
+    @game = Game.find(params[:id] = Random.rand(1...60))
   end
   
   #def index

@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  root 'game#index'
+  root 'game#game' 
   
   get 'user/register'
   
-  #get 'game/create'
-
   #get 'game/update'
 
   #get 'game/main'
