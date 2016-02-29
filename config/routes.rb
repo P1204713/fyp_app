@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  root 'game#game' 
+  root 'game#game'
   
   get 'user/register'
   
-  #get 'game/update'
-
-  #get 'game/main'
+  # get 'game/update_counts'
+  
+  post 'game/update_counts'
+  
+  
+  # get 'game/main'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

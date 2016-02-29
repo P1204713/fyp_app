@@ -1,0 +1,33 @@
+<!-- <h1>Game#Update</h1>
+<p>Find me in app/views/game/update.html.erb</p> -->
+
+
+<h1>Saved !!</h1>
+
+
+<!-- receive HTML form -->
+
+
+<!-- <p>Word_ID: <%= params[:wordid] %></p>
+<p>Word: <%= params[:word] %></p>
+<p>User_ID: <%= params[:userid] %></p>
+<p>Count: <%= params[:count] %></p> -->
+
+
+<!-- db -->
+
+
+<!-- VocabCount.create(:word_id => params[:wordid], :user_id => params[:userid], :counts => params[:count]) -->
+<!-- VocabCount.where('counts > ?', 0).update_all("counts = counts - 1") %> -->
+
+
+<% VocabCount.find_or_create_by(:word_id => params[:wordid], :user_id => params[:userid], :counts => params[:count]) %>
+
+
+
+<!-- go back to game.html -->
+
+
+<script>
+setTimeout(function(){document.location = 'https://fyp-p1204713.c9users.io/'}, 1000);
+</script>

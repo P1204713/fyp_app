@@ -1,5 +1,5 @@
-<!-- <h1>Game#index</h1>
-<p>Find me in app/views/game/index.html.erb</p> -->
+<!-- <h1>Game#game</h1>
+<p>Find me in app/views/game/game.html.erb</p> -->
 
 <h4>
   <table align=center>
@@ -9,15 +9,29 @@
   </table>
 </h4>  
   
-  <%= link_to('I am not OKAY with this', root_path, class: "btn btn-default") %>
-  <%= link_to('I am Fair with this', root_path, class: "btn btn-default") %>
-  <%= link_to('I am definitely OKAY with this', root_path, class: "btn btn-default") %>
- 
+<table align=center>
+ <tr>
+   <td>
+    <%= button_to 'I am not OKAY with this', {:controller => "game", :action => "update_counts", :wordid => @game.id, :word => @game.word, :userid => current_user, :count => 5}, {:method=>:post, class: "btn btn-default"}  %>
+   </td>
+   <td>
+    | <%= link_to('I am Fair with this', root_path, class: "btn btn-default") %> |
+   </td>
+   <td>
+    <%= button_to 'I am definitely OKAY with this', {:controller => "game", :action => "update_counts", :wordid => @game.id, :word => @game.word, :userid => current_user, :count => 20}, {:method=>:post, class: "btn btn-default"}  %>
+   </td>
+ </tr>
+</table>
+
+
+  <!-- = link_to('I am not OKAY with this', root_path, class: "btn btn-default") %> -->
+  <!-- = link_to('I am Fair with this', root_path, class: "btn btn-default") %> -->
+  <!-- = link_to('I am definitely OKAY with this', root_path, class: "btn btn-default") %> -->
+  
   <!-- <a href="https://fyp-p1204713.c9users.io/", class: "btn btn-default">Reload</a> -->
   <!-- <input type="button" name="333" value="Reload" onClick="window.location.href='https://fyp-p1204713.c9users.io/'" class="btn btn-default"> -->
-   
-   
 <br> 
+
   
 <h5>
 <% if current_user %> 
@@ -33,10 +47,10 @@
 
 
 
-<!-- <% if current_user %>
-    <%= link_to('sign out', destroy_user_session_path, :method => :delete) %> |
-    <%= link_to('change password', edit_registration_path(:user)) %>
-<% else %>
-    <%= link_to('create', new_registration_path(:user)) %> |
-    <%= link_to('sign in', new_session_path(:user)) %>
-<% end %> -->
+<!--  if current_user %>
+    = link_to('sign out', destroy_user_session_path, :method => :delete) %> |
+    = link_to('change password', edit_registration_path(:user)) %>
+ else %>
+    = link_to('create', new_registration_path(:user)) %> |
+    = link_to('sign in', new_session_path(:user)) %>
+ end %> -->
